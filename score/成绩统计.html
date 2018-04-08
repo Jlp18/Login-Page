@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<!--<meta http-equiv="refresh" content="30">         每30秒刷新一次当前页面-->
+		<title>计算机成绩</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<style>
+			h4{
+				color: white;
+				font-family: "微软雅黑";
+				font-size: 22px;
+				font-weight: bold;
+			}
+			div{
+				font-family: "黑体";
+				font-weight: bold;
+			}
+			span{
+				font-family: "微软雅黑";
+                font-size: 16px;
+                color: white;
+			}
+			table{
+				color: white;
+				border-color: white;
+			}	
+		</style>
+	</head>
+	<body background="img/2.jpg">
+		<h4 align="center" >计算机成绩统计</h4>
+		<table border="1" width="700" align="center" id="TableA">
+			<thead>
+				<tr>
+					<th width="25%" >计算机成绩/学生姓名</th><th width="10%">Java<span id="java"></span></th><th width="10%">OOP<span id="oop"></span></th><th width="10%">Web<span id="web"></span></th><th width="10%">DB<span id="db"></span></th><th>学生平均分</th><th width="15%">等级</th>
+				</tr>
+			</thead>
+		</table>
+		<table border="1" width="700" align="center" style="border-top:none" id="TableB">
+			<thead>
+				<tr height="20">
+					<th width="25%"></th><th width="10%"></th><th width="10%"></th><th width="10%"></th><th width="10%"></th><th></th><th width="15%"></th>
+				</tr>
+			</thead>
+		</table>
+		<hr color="black">
+		<form onsubmit="return check()?dosubmit():false"  align="center">
+			<div>
+			<span>StudentName:</span>&nbsp;&nbsp;<input type="text" id="StudentName" style="font-weight: normal;" placeholder="请输入学生姓名">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span>Java:</span>&nbsp;&nbsp;<input type="text" id="Java" style="font-weight: normal;" placeholder="请输入Java成绩">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span>OOP:</span>&nbsp;&nbsp;<input type="text"  id="OOP" style="font-weight: normal;" placeholder="请输入OOP成绩">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span>Web:</span>&nbsp;&nbsp;<input type="text" id="Web" style="font-weight: normal;" placeholder="请输入Web成绩">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			<span>DB:</span>&nbsp;&nbsp;<input type="text" id="DB" style="font-weight: normal;" placeholder="请输入DB成绩">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			</div>
+			<br>
+			<br>
+			<p align="center">
+				<input class="btn btn-primary" name="tj" type="submit" id="tj" value="提交">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<input class="btn btn-danger" type="button" value="结束" onclick="return_sum()">
+			</p>
+		</form>
+		<script src="js/grade.js"></script>
+		<script src="js/检查.js"></script>
+	</body>
+</html>
